@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/lTextos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black"
+        >
+        <TextView
+            android:id="@+id/tvnameUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Bienvenido Cristian"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"
+            ></TextView>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PAISES"
+            android:textColor="#BF360C"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            >
+        </TextView>
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:background="#E53935"
+        app:layout_constraintTop_toBottomOf="@id/lTextos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <ListView
+        android:id="@+id/lvPaises"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="#3CF57F17"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0"
+        ></ListView>
+
+    <View
+        android:id="@+id/box1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#000"
+        app:layout_constraintTop_toBottomOf="@+id/lvPaises"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+
+        />
+
+    <View
+        android:id="@+id/box2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#CA2020"
+        app:layout_constraintBottom_toBottomOf="@+id/box1"
+        app:layout_constraintStart_toEndOf="@+id/box1"
+        app:layout_constraintEnd_toStartOf="@+id/box3"
+        app:layout_constraintTop_toTopOf="@+id/box1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/box3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#F4511E"
+        app:layout_constraintBottom_toBottomOf="@+id/box2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box2"
+
+        app:layout_constraintTop_toTopOf="@+id/box2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
